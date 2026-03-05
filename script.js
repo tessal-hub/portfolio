@@ -6,11 +6,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ── Scroll-triggered reveals (everything outside .hero)
+    // ── Horizontal Scroll / Leaf Turning (Projects)
+    const workItems = document.querySelectorAll('.work-item');
+    
+    // Observer for the leaves (projects)
+    const leafObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-active');
+            } else {
+                entry.target.classList.remove('is-active');
+            }
+        });
+    }, {
+        root: null, // viewport
+        rootMargin: '0px -15% 0px -15%', // Trigger when item enters middle 70% of screen
+        threshold: 0.5 // Require at least 50% visibility
+    });
+
+    workItems.forEach(item => leafObserver.observe(item));
+
+    // ── Scroll-triggered reveals (everything else)
     const revealEls = document.querySelectorAll(
-        'section:not(.hero) .reveal-fade, ' +
-        'section:not(.hero) .reveal-up, ' +
-        'section:not(.hero) .reveal-line'
+        'section:not(.hero) .reveal-fade:not(.work-tags), ' +
+        'section:not(.hero) .reveal-up:not(.work-item), ' +
+        'section:not(.hero) .reveal-line:not(.work-divider)'
     );
 
     const io = new IntersectionObserver((entries, observer) => {
@@ -21,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Stagger siblings within the same direct parent
             const siblings = [...(el.parentElement?.querySelectorAll(
-                ':scope > .reveal-fade, :scope > .reveal-up, :scope > .reveal-line'
+                ':scope > .reveal-fade:not(.work-tags), :scope > .reveal-up:not(.work-item), :scope > .reveal-line:not(.work-divider)'
             ) || [])];
             const idx = siblings.indexOf(el);
             if (idx > 0) {
