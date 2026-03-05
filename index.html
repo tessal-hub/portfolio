@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tessal — Electrical & Computer Engineer</title>
+    <meta name="description" content="Portfolio of Tessal, an Electrical & Computer Engineer crafting elegant hardware-software solutions.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <!-- Visible immediately. No blank-page surprise. -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <span class="hero-tag">Electrical &amp; Computer Engineer</span>
+            <h1 class="hero-name">Tessal</h1>
+            <div class="hero-line hero-line-anim"></div>
+            <p class="hero-sub">Crafting systems at the boundary<br>of hardware and software.</p>
+        </div>
+
+        <!-- Decorative illustration panel — right side of hero -->
+        <div class="hero-art" aria-hidden="true">
+            <div class="hero-art-frame">
+                <!-- Morphing enso / abstract shape -->
+                <div class="enso-wrap">
+                    <div class="enso"></div>
+                    <div class="enso enso--inner"></div>
+                </div>
+                <!-- Circuit-like grid dots -->
+                <div class="dot-grid"></div>
+            </div>
+        </div>
+
+        <a href="#intro" class="scroll-hint" aria-label="Scroll down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ── INTRO ─────────────────────────────────────────────── -->
+    <section id="intro" class="intro">
+        <div class="container">
+            <p class="intro-statement reveal-up">
+                I build things that exist at the boundary of hardware and software —
+                systems that are precise, intentional, and quietly remarkable.
+            </p>
+        </div>
+    </section>
+
+    <!-- ── WORK ──────────────────────────────────────────────── -->
+    <section id="projects" class="work">
+        <div class="container">
+            <p class="section-label reveal-fade">Selected Work</p>
+
+            <!-- Project 1 -->
+            <article class="work-item reveal-up">
+                <!-- Image panel left -->
+                <div class="work-image" data-index="01">
+                    <!-- Drop your image here: <img src="images/hexapod.jpg" alt="Hexapod Robot"> -->
+                    <div class="work-image-placeholder">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                </div>
+                <!-- Content right -->
+                <div class="work-body">
+                    <div class="work-header">
+                        <span class="work-index">01</span>
+                        <div class="work-tags reveal-fade">
+                            <span>C/C++</span><span>Embedded Systems</span><span>Inverse Kinematics</span>
+                        </div>
+                    </div>
+                    <h2 class="work-title">Hexapod &amp; Spider Robot</h2>
+                    <p class="work-desc reveal-fade">
+                        A six-legged locomotion platform inspired by arachnid biomechanics,
+                        featuring custom inverse kinematics, servo coordination, and
+                        embedded real-time control.
+                    </p>
+                    <a href="#" class="work-link reveal-fade"><i class="fab fa-github"></i> View Source</a>
+                </div>
+            </article>
+
+            <div class="work-divider reveal-line"></div>
+
+            <!-- Project 2 — image on right -->
+            <article class="work-item work-item--flip reveal-up">
+                <div class="work-body">
+                    <div class="work-header">
+                        <span class="work-index">02</span>
+                        <div class="work-tags reveal-fade">
+                            <span>Arduino</span><span>Python</span><span>Curriculum Design</span>
+                        </div>
+                    </div>
+                    <h2 class="work-title">STEM Education for High Schoolers</h2>
+                    <p class="work-desc reveal-fade">
+                        A hands-on curriculum and platform designed to introduce high school
+                        students to electronics, programming, and engineering through
+                        guided, practical experiments.
+                    </p>
+                    <a href="#" class="work-link reveal-fade"><i class="fab fa-github"></i> View Source</a>
+                </div>
+                <div class="work-image" data-index="02">
+                    <div class="work-image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </article>
+
+            <div class="work-divider reveal-line"></div>
+
+            <!-- Project 3 — image on left -->
+            <article class="work-item reveal-up">
+                <div class="work-image" data-index="03">
+                    <div class="work-image-placeholder">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                </div>
+                <div class="work-body">
+                    <div class="work-header">
+                        <span class="work-index">03</span>
+                        <div class="work-tags reveal-fade">
+                            <span>Robotics</span><span>PCB Design</span><span>Motion Control</span>
+                        </div>
+                    </div>
+                    <h2 class="work-title">Delta Robot</h2>
+                    <p class="work-desc reveal-fade">
+                        A high-speed parallel-arm delta robot designed for precise
+                        pick-and-place operations, with custom trajectory planning
+                        and real-time motor control.
+                    </p>
+                    <a href="#" class="work-link reveal-fade"><i class="fab fa-github"></i> View Source</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────── -->
+    <section id="about" class="about">
+        <div class="container">
+            <p class="section-label reveal-fade">About</p>
+            <div class="about-grid">
+
+                <!-- Portrait / illustration -->
+                <div class="about-image reveal-up">
+                    <!-- Drop your photo here: <img src="images/portrait.jpg" alt="Tessal"> -->
+                    <div class="about-image-frame">
+                        <div class="about-image-placeholder">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <div class="about-image-accent"></div>
+                    </div>
+                </div>
+
+                <!-- Text + skills -->
+                <div class="about-text">
+                    <h2 class="about-title reveal-up">
+                        Passionate about the intersection<br>of the physical and digital.
+                    </h2>
+                    <p class="about-para reveal-fade">
+                        I'm Tessal — an Electrical and Computer Engineer with a deep appreciation
+                        for hardware-software co-design. I believe in building systems that are
+                        robust, efficient, and seamlessly bridge the physical and digital worlds.
+                    </p>
+                    <p class="about-para reveal-fade">
+                        When I'm not building, you can find me exploring new technologies,
+                        studying algorithmic efficiency, or enjoying a quiet cup of matcha.
+                    </p>
+
+                    <div class="skill-group reveal-up">
+                        <p class="skill-group-label">Programming</p>
+                        <div class="skill-list">
+                            <span class="reveal-fade skill-primary">C / C++</span>
+                            <span class="reveal-fade">Python</span>
+                            <span class="reveal-fade">HTML / CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group reveal-up">
+                        <p class="skill-group-label">Hardware</p>
+                        <div class="skill-list">
+                            <span class="reveal-fade">ESP32</span>
+                            <span class="reveal-fade">Arduino</span>
+                            <span class="reveal-fade">STM32</span>
+                            <span class="reveal-fade">Luckfox Pico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────────── -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <p class="section-label reveal-fade">Contact</p>
+            <h2 class="contact-title reveal-up">Let's work together.</h2>
+            <a href="mailto:hello@example.com" class="contact-email reveal-fade">hello@example.com</a>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Tessal<span>.</span></span>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Tessal. Crafted with intention.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
