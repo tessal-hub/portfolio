@@ -49,9 +49,9 @@ body {
     -webkit-font-smoothing: antialiased;
     /* Seigaiha (青海波) wave pattern — ancient painting motif */
     background-image:
-        radial-gradient(circle at 15% 50%, var(--accent-glow) 0%, transparent 45%),
-        radial-gradient(circle at 85% 20%, var(--accent-glow2) 0%, transparent 45%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cg fill='none' stroke='%23b54a3c' stroke-width='0.5' opacity='0.07'%3E%3Cpath d='M0 40 A40 40 0 0 1 40 0 A40 40 0 0 1 80 40'/%3E%3Cpath d='M-40 40 A40 40 0 0 1 0 0 A40 40 0 0 1 40 40'/%3E%3Cpath d='M40 40 A40 40 0 0 1 80 0 A40 40 0 0 1 120 40'/%3E%3C/g%3E%3C/svg%3E");
+        radial-gradient(circle at 15% 50%, rgba(181,74,60,0.14) 0%, transparent 65%),
+        radial-gradient(circle at 85% 20%, rgba(200,112,94,0.12) 0%, transparent 65%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cg fill='none' stroke='%23b54a3c' stroke-width='0.7' opacity='0.10'%3E%3Cpath d='M0 40 A40 40 0 0 1 40 0 A40 40 0 0 1 80 40'/%3E%3Cpath d='M-40 40 A40 40 0 0 1 0 0 A40 40 0 0 1 40 40'/%3E%3Cpath d='M40 40 A40 40 0 0 1 80 0 A40 40 0 0 1 120 40'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
 }
 a { text-decoration: none; color: inherit; }
