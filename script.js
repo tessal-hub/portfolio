@@ -26,6 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     workItems.forEach(item => leafObserver.observe(item));
 
+    // Map vertical mouse wheel to horizontal scroll for desktop users
+    const workCarousel = document.querySelector('.work-carousel');
+    if (workCarousel) {
+        workCarousel.addEventListener('wheel', (e) => {
+            // If the user is scrolling vertically with a mouse wheel
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                e.preventDefault();
+                // Smoothly map vertical scroll to horizontal scroll
+                workCarousel.scrollBy({
+                    left: e.deltaY * 1.5,
+                    behavior: 'smooth'
+                });
+            }
+        }, { passive: false });
+    }
+
     // ── Scroll-triggered reveals (everything else)
     const revealEls = document.querySelectorAll(
         'section:not(.hero) .reveal-fade:not(.work-tags), ' +
