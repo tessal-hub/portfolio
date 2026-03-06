@@ -30,14 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const workCarousel = document.querySelector('.work-carousel');
     if (workCarousel) {
         workCarousel.addEventListener('wheel', (e) => {
-            // If the user is scrolling vertically with a mouse wheel
+            // Check if we are scrolling vertically
             if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                e.preventDefault();
-                // Smoothly map vertical scroll to horizontal scroll
-                workCarousel.scrollBy({
-                    left: e.deltaY * 1.5,
-                    behavior: 'smooth'
-                });
+                // Determine if we can scroll horizontally in the intended direction
+                const isScrollingDown = e.deltaY > 0;
+                const canScrollRight = Math.ceil(workCarousel.scrollLeft + workCarousel.clientWidth) < workCarousel.scrollWidth;
+                const canScrollLeft = workCarousel.scrollLeft > 0;
+
+                if ((isScrollingDown && canScrollRight) || (!isScrollingDown && canScrollLeft)) {
+                    // Only prevent default (stop vertical scroll) if there is room to scroll horizontally
+                    e.preventDefault();
+                    workCarousel.scrollBy({
+                        left: e.deltaY * 1.5,
+                        behavior: 'smooth'
+                    });
+                }
             }
         }, { passive: false });
     }
