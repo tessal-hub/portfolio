@@ -946,6 +946,12 @@ body::before  { display: none; }
     transition: all 0.2s ease;
     background: var(--bg-card);
 }
+.social-icon {
+    width: 18px;
+    height: 18px;
+    stroke: var(--ink);
+    fill: none;
+}
 .social-links a:hover {
     color: var(--bg-warm);
     background: var(--accent);
