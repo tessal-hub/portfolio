@@ -1,0 +1,58 @@
+# Dependencies & Build Outputs
+node_modules/
+dist/
+build/
+out/
+.pnp/
+.pnp.js
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.swp
+*.swo
+*~
+
+# Temporary & Cache directories
+.cache/
+.parcel-cache/
+tmp/
+temp/
+.temp/
+
+# Non-web Project Documents & Local Tool Artifacts
+.agents/
+.impeccable/
+design-demos/
+images/
+skills-lock.json
+project-facts.md
+DESIGN.md
+PRODUCT.md
+*.tmp
