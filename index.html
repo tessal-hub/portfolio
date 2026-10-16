@@ -42,33 +42,121 @@
                 <span class="hero-tag" data-i18n="hero.tag">Electrical &amp; Computer Engineer</span>
                 <h1 class="hero-title" data-i18n="hero.title">Crafting systems at the boundary of physical reality and digital silicon.</h1>
                 <p class="hero-lead" data-i18n="hero.lead">
-                    Robotics kinematics, embedded firmware architectures, real-time biosignal telemetry, and low-latency wireless peripherals designed with quiet restraint and mathematical clarity.
+                    Mechatronics kinematics, embedded Linux hosts, deterministic firmware architectures, real-time biosignals, and high-speed motion controllers designed with quiet restraint and mathematical clarity.
                 </p>
                 <div class="hero-links">
-                    <a href="#works" class="link-text" data-i18n="hero.works">Selected Engineering Works ↓</a>
+                    <a href="#works" class="link-text" data-i18n="hero.works">Ranked Engineering Works ↓</a>
                     <a href="https://github.com/tessal-hub" target="_blank" rel="noopener noreferrer" class="link-ghost" data-i18n="hero.github">GitHub Archive ↗</a>
-                    <span class="link-ghost" data-i18n="hero.status">07 Repositories Verified Live</span>
+                    <span class="link-ghost" data-i18n="hero.status">08 Verified Engineering Projects</span>
                 </div>
             </section>
 
             <!-- ── HARMONIC TELEMETRY STRIP ── -->
             <div class="sub-telemetry-strip" role="region" aria-label="Laboratory telemetry status">
-                <span data-i18n="telemetry.left">6-AXIS ROBOTICS · 12-CH I/O</span>
+                <span data-i18n="telemetry.left">COREXY KLIPPER · 6-AXIS ARM</span>
                 <canvas id="telemetryScope" class="sub-telemetry-scope" width="220" height="32" aria-label="Harmonic oscilloscope telemetry"></canvas>
-                <span data-i18n="telemetry.center">ECG / PPG BIOSIGNALS · TINYML</span>
-                <span data-i18n="telemetry.right">ESP32-S3 · STM32 · KOTLIN BLE</span>
+                <span data-i18n="telemetry.center">HIGH-SPEED PID · BIOSIGNALS</span>
+                <span data-i18n="telemetry.right">LUCKFOX · ESP32-S3 · STM32</span>
             </div>
 
-            <!-- ── SELECTED WORKS FOLIO ── -->
+            <!-- ── SELECTED WORKS FOLIO (RANKED BY COMPLEXITY) ── -->
             <section id="works">
                 <div class="section-label">
                     <span class="section-index">01</span>
-                    <h2 class="section-heading" data-i18n="sec.works">Selected Works</h2>
+                    <h2 class="section-heading" data-i18n="sec.works">Selected Works (Ranked by Complexity)</h2>
                 </div>
 
                 <div class="folio-list">
-                    <!-- Plate 01: Robotic Arm -->
+
+                    <!-- Plate 01: Custom CoreXY Klipper 3D Printer (Rank 1 - Mechatronics & Linux Host) -->
                     <article class="folio-item">
+                        <div class="folio-drawing" data-plate="COREXY KINEMATICS &amp; DUAL BELT PATH" data-ref="RV1106 · CORTEX-A7 1.2 GHz · CAN BUS · INPUT SHAPING">
+                            <svg class="drawing-svg" viewBox="0 0 460 215" aria-label="CoreXY Klipper 3D Printer Kinematics and Control Architecture">
+                                <!-- Aluminum Extrusion Frame -->
+                                <g transform="translate(25, 18)">
+                                    <rect width="180" height="145" fill="none" stroke="#181716" stroke-width="1.4"/>
+                                    <rect x="6" y="6" width="168" height="133" fill="rgba(103,80,138,.03)" stroke="#67508a" stroke-width="0.7" stroke-dasharray="2,2"/>
+                                    
+                                    <!-- Y-Rails (Left & Right) -->
+                                    <line x1="16" y1="12" x2="16" y2="133" stroke="#181716" stroke-width="2" stroke-linecap="round"/>
+                                    <line x1="164" y1="12" x2="164" y2="133" stroke="#181716" stroke-width="2" stroke-linecap="round"/>
+                                    <text x="10" y="8" font-family="JetBrains Mono" font-size="6.5" fill="#8E8A84">MGN12 Y_L</text>
+                                    <text x="170" y="8" font-family="JetBrains Mono" font-size="6.5" fill="#8E8A84" text-anchor="end">MGN12 Y_R</text>
+
+                                    <!-- Stepper Motors (A: Top Left, B: Top Right) -->
+                                    <rect x="10" y="10" width="18" height="18" fill="#181716" rx="1"/>
+                                    <text x="19" y="22" font-family="JetBrains Mono" font-size="7" fill="#FAF9F5" text-anchor="middle">A</text>
+                                    <rect x="152" y="10" width="18" height="18" fill="#181716" rx="1"/>
+                                    <text x="161" y="22" font-family="JetBrains Mono" font-size="7" fill="#FAF9F5" text-anchor="middle">B</text>
+
+                                    <!-- Crossed X-Gantry -->
+                                    <line x1="16" y1="72" x2="164" y2="72" stroke="#181716" stroke-width="3.5" stroke-linecap="round"/>
+                                    <text x="152" y="66" font-family="JetBrains Mono" font-size="6.5" fill="#67508a">MGN9 X</text>
+
+                                    <!-- Toolhead Carriage -->
+                                    <rect x="80" y="62" width="20" height="20" fill="#FAF9F5" stroke="#181716" stroke-width="1.3"/>
+                                    <circle cx="90" cy="72" r="3" fill="#C84B31"/>
+                                    <path d="M 87 82 L 90 88 L 93 82 Z" fill="#C84B31"/>
+
+                                    <!-- Belt A Path (Vermilion) -->
+                                    <path d="M 28 19 H 145 L 145 66 H 100 M 80 66 H 28 L 28 126 H 40" fill="none" stroke="#C84B31" stroke-width="1" stroke-dasharray="2,2"/>
+                                    
+                                    <!-- Belt B Path (Violet) -->
+                                    <path d="M 152 23 H 35 L 35 76 H 80 M 100 76 H 152 L 152 126 H 140" fill="none" stroke="#67508a" stroke-width="1"/>
+
+                                    <text x="90" y="116" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B" text-anchor="middle">SYNCHRONIZED DUAL H-BELTS</text>
+                                    <text x="90" y="128" font-family="JetBrains Mono" font-size="6.5" fill="#8E8A84" text-anchor="middle">ΔX = 0.5(ΔA + ΔB) · ΔY = 0.5(ΔA - ΔB)</text>
+                                </g>
+
+                                <!-- Interconnect CAN Bus Cable -->
+                                <path d="M 205 90 H 248" stroke="#67508a" stroke-width="1.4"/><path d="M 243 85 l 6 5 -6 5" fill="none" stroke="#67508a" stroke-width="1.4"/>
+                                <text x="226" y="81" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84" text-anchor="middle">CAN 1 Mbps</text>
+                                <text x="226" y="104" font-family="JetBrains Mono" font-size="6.5" fill="#C84B31" text-anchor="middle">4-WIRE</text>
+
+                                <!-- Embedded Linux Host & Hardware Architecture -->
+                                <g transform="translate(250, 18)">
+                                    <!-- Luckfox Pico Max Host -->
+                                    <rect width="185" height="56" fill="none" stroke="#181716" stroke-width="1.3"/>
+                                    <text x="92" y="18" text-anchor="middle" font-family="JetBrains Mono" font-size="9.5" fill="#181716">LUCKFOX PICO MAX</text>
+                                    <text x="92" y="32" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#67508a">ROCKCHIP RV1106 · CORTEX-A7 1.2 GHz</text>
+                                    <text x="92" y="45" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B">KLIPPER LINUX HOST · MOONRAKER · SPI/UART</text>
+
+                                    <!-- Toolhead & Input Shaping -->
+                                    <g transform="translate(0, 64)">
+                                        <rect width="185" height="42" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
+                                        <text x="92" y="16" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#181716">CAN TOOLHEAD + ADXL345</text>
+                                        <text x="92" y="27" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">RP2040 MCU · INPUT SHAPING RESONANCE</text>
+                                        <text x="92" y="37" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#C84B31">MZV / EI FREQ FILTER · 500 mm/s @ 20k ACCEL</text>
+                                    </g>
+
+                                    <!-- Stepper & Motion Driver Block -->
+                                    <g transform="translate(0, 114)">
+                                        <rect width="185" height="32" fill="none" stroke="#181716" stroke-width="1.1"/>
+                                        <text x="92" y="14" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">TMC2209 STEALTHCHOP</text>
+                                        <text x="92" y="25" text-anchor="middle" font-family="JetBrains Mono" font-size="6.8" fill="#8E8A84">SENSORLESS HOMING · 3-POINT EXPANSION BED</text>
+                                    </g>
+                                </g>
+
+                                <!-- Bottom Line -->
+                                <text x="25" y="184" font-family="JetBrains Mono" font-size="8.5" fill="#8E8A84">LUCKFOX RV1106 LINUX HOST → CAN BUS 1 Mbps → INPUT SHAPING ACCEL → 20,000 mm/s² ACCEL</text>
+                            </svg>
+                        </div>
+                        <div class="folio-details">
+                            <span class="folio-fig" data-i18n="p.corexy.fig">FIG. 01 — HIGH-SPEED MECHATRONICS &amp; EMBEDDED LINUX</span>
+                            <h3 class="folio-title" data-i18n="p.corexy.title">Custom CoreXY Klipper 3D Printer</h3>
+                            <div class="folio-tags" data-i18n="p.corexy.tags">Embedded Linux · Luckfox Pico Max · Klipper · CAN Bus · CoreXY</div>
+                            <p class="folio-desc" data-i18n="p.corexy.desc">
+                                A scratch-built high-speed CoreXY 3D printer running Klipper Linux host directly on a Luckfox Pico Max (ARM Cortex-A7 @ 1.2 GHz). Features dual synchronized H-belt kinematics, CAN bus toolhead integration, ADXL345 input shaping for resonance compensation, and silent TMC2209 stepping.
+                            </p>
+                            <div class="folio-actions">
+                                <a href="https://github.com/tessal-hub/embedded_linux_with_luckfoxpico" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
+                                <button type="button" class="link-ghost" onclick="showSubSpec('corexy')" data-i18n="action.spec">Inspect Spec</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Plate 02: Robotic Arm (Rank 2 - Robotics Kinematics & 50 kHz Step Engine) -->
+                    <article class="folio-item reverse">
                         <div class="folio-drawing" data-plate="CLOSED-LOOP ARM / X-Z PROJECTION" data-ref="ESP32-S3 · 6 × AS5600 · 50 kHz">
                             <svg class="drawing-svg" viewBox="0 0 460 260" aria-label="6-DOF Robotic Arm kinematic vector blueprint">
                                 <!-- World Frame -->
@@ -104,7 +192,7 @@
                             </svg>
                         </div>
                         <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.arm.fig">FIG. 01 — KINEMATICS &amp; TRAJECTORY</span>
+                            <span class="folio-fig" data-i18n="p.arm.fig">FIG. 02 — KINEMATICS &amp; TRAJECTORY</span>
                             <h3 class="folio-title" data-i18n="p.arm.title">NEMA 6-Axis Robotic Arm</h3>
                             <div class="folio-tags" data-i18n="p.arm.tags">C++17 · ESP32-S3 · FreeRTOS · Modified DH</div>
                             <p class="folio-desc" data-i18n="p.arm.desc">
@@ -117,90 +205,76 @@
                         </div>
                     </article>
 
-                    <!-- Plate 02: STEM AI Platform -->
-                    <article class="folio-item reverse">
-                        <div class="folio-drawing" data-plate="WAND GESTURE DATA FLOW" data-ref="50 Hz · 64 × 6 IMU WINDOW">
-                            <svg class="drawing-svg" viewBox="0 0 400 190" aria-label="STEM AI wand gesture data flow">
-                                <g transform="translate(26, 38)">
-                                    <rect x="20" y="0" width="30" height="76" rx="14" fill="none" stroke="#181716" stroke-width="1.4"/>
-                                    <circle cx="35" cy="12" r="4" fill="#C84B31"/>
-                                    <path d="M35 24v38 M25 35h20 M25 49h20" stroke="#67508a" stroke-width="1"/>
-                                    <text x="35" y="94" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">ESP32 + MPU6050</text>
-                                </g>
-                                <path d="M92 76H132" stroke="#67508a" stroke-width="1.2"/><path d="M127 71l8 5-8 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <text x="100" y="63" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">UART / CSV</text>
-                                <g transform="translate(140, 38)">
-                                    <rect width="94" height="76" fill="none" stroke="#181716" stroke-width="1.2"/>
-                                    <path d="M10 20h74M10 32h74M10 44h74M10 56h74" stroke="#67508a" stroke-width="1" opacity=".7"/>
-                                    <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">64 × 6 WINDOW</text>
-                                    <text x="47" y="70" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">ax ay az gx gy gz</text>
-                                </g>
-                                <path d="M240 58h28M240 94h28" stroke="#67508a" stroke-width="1.2"/><path d="M263 53l8 5-8 5M263 89l8 5-8 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <g transform="translate(276, 31)">
-                                    <rect width="96" height="35" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
-                                    <text x="48" y="15" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">FEW-SHOT ENCODER</text>
-                                    <text x="48" y="27" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">TENSORFLOW LITE</text>
-                                    <rect y="50" width="96" height="35" fill="none" stroke="#181716" stroke-width="1"/>
-                                    <text x="48" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">ML LAB · 15 MODELS</text>
-                                    <text x="48" y="77" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">C99 EXPORT</text>
-                                </g>
-                                <g transform="translate(146,132)">
-                                    <circle cx="0" cy="0" r="3" fill="#67508a"/><circle cx="68" cy="0" r="3" fill="#67508a"/><circle cx="136" cy="0" r="3" fill="#67508a"/><circle cx="204" cy="0" r="3" fill="#C84B31"/>
-                                    <path d="M5 0h58M73 0h58M141 0h58" stroke="#67508a" stroke-width="1"/>
-                                    <text x="0" y="14" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">COLLECT</text><text x="68" y="14" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">TRAIN</text><text x="136" y="14" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">DIAGNOSE</text><text x="204" y="14" text-anchor="end" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">DEPLOY</text>
-                                </g>
-                                <text x="30" y="154" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">RECORD → TRAIN → DIAGNOSE → FLASH TO WAND</text>
-                            </svg>
-                        </div>
-                        <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.ai.fig">FIG. 02 — WAND GESTURE LEARNING</span>
-                            <h3 class="folio-title" data-i18n="p.ai.title">STEM AI Platform</h3>
-                            <div class="folio-tags" data-i18n="p.ai.tags">PyQt6 · ESP32 · MPU6050 · TensorFlow Lite</div>
-                            <p class="folio-desc" data-i18n="p.ai.desc">
-                                A desktop learning environment where a physical ESP32 wand streams 6-axis IMU data at 50 Hz for few-shot gesture recognition, classic ML experiments, and one-click C99 deployment.
-                            </p>
-                            <div class="folio-actions">
-                                <a href="https://github.com/tessal-hub/stem_ai" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
-                                <button type="button" class="link-ghost" onclick="showSubSpec('ai')" data-i18n="action.spec">Inspect Spec</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Plate 03: DSP-PPG Analyzer -->
+                    <!-- Plate 03: High-Speed Line Follower Robot (Rank 3 - Deterministic Real-Time Control) -->
                     <article class="folio-item">
-                        <div class="folio-drawing" data-plate="DUAL-CHANNEL PPG ANALYSIS" data-ref="EXCEL · TIME · IR · RED" style="flex-direction:column; align-items:stretch;">
-                            <svg viewBox="0 0 380 140" style="width:100%; height:auto;" aria-label="PPG bandpass filter diagram">
-                                <rect x="20" y="10" width="340" height="85" fill="none" stroke="#E8E5DF" stroke-width="1"/>
-                                <path d="M 30 70 L 60 70 L 70 50 L 80 85 L 90 40 L 105 70 L 140 70" fill="none" stroke="#C84B31" stroke-width="1.5"/>
-                                <path d="M 140 70 L 170 70 L 180 50 L 190 85 L 200 40 L 215 70 L 250 70" fill="none" stroke="#C84B31" stroke-width="1.5"/>
-                                <text x="30" y="30" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">EXCEL INPUT: timestamp · IR · red</text>
-                                <path d="M270 78h68M270 78v-28M270 78l18-12 16 6 18-20" fill="none" stroke="#67508a" stroke-width="1"/>
-                                <text x="272" y="47" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">0.8–4.0 Hz BAND</text>
-                                <text x="30" y="115" font-family="JetBrains Mono" font-size="9" fill="#524F4B">ARTIFACT CHECK → HR · SpO2 · RR · HRV · PI</text>
+                        <div class="folio-drawing" data-plate="HIGH-SPEED VEHICLE DYNAMICS" data-ref="ESP32 · 8-CH MUX · 20 kHz PWM · PID">
+                            <svg class="drawing-svg" viewBox="0 0 460 200" aria-label="High-Speed ESP32 Line Follower Hardware Architecture">
+                                <!-- Front 8-Sensor Array -->
+                                <g transform="translate(30, 20)">
+                                    <rect width="130" height="36" fill="none" stroke="#181716" stroke-width="1.3"/>
+                                    <text x="65" y="15" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#181716">8-CHANNEL OPTICAL BAR</text>
+                                    <g fill="#67508a">
+                                        <circle cx="12" cy="26" r="2.2"/><circle cx="27" cy="26" r="2.2"/><circle cx="42" cy="26" r="2.2"/><circle cx="57" cy="26" r="2.2"/>
+                                        <circle cx="72" cy="26" r="2.2"/><circle cx="87" cy="26" r="2.2"/><circle cx="102" cy="26" r="2.2"/><circle cx="117" cy="26" r="2.2"/>
+                                    </g>
+                                    <text x="12" y="34" font-family="JetBrains Mono" font-size="5.5" fill="#8E8A84">S0</text>
+                                    <text x="117" y="34" font-family="JetBrains Mono" font-size="5.5" fill="#8E8A84">S7</text>
+                                </g>
+                                <!-- Arrow to MUX -->
+                                <path d="M 95 56 v 18" stroke="#67508a" stroke-width="1.2"/><path d="M 90 69 l 5 5 5 -5" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <!-- CD74HC4067 MUX -->
+                                <g transform="translate(30, 74)">
+                                    <rect width="130" height="42" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
+                                    <text x="65" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#181716">CD74HC4067 (16:1 MUX)</text>
+                                    <text x="65" y="31" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84">GPIO 16,17,23 → ADC1_CH0</text>
+                                </g>
+                                <!-- Arrow from MUX to MCU -->
+                                <path d="M 160 95 h 42" stroke="#67508a" stroke-width="1.2"/><path d="M 197 90 l 6 5 -6 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <text x="180" y="87" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84" text-anchor="middle">ADC1</text>
+                                <!-- ESP32 Controller Core -->
+                                <g transform="translate(204, 20)">
+                                    <rect width="118" height="96" fill="none" stroke="#181716" stroke-width="1.3"/>
+                                    <text x="59" y="20" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#181716">ESP32 MCU</text>
+                                    <text x="59" y="36" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#C84B31">1 kHz PID LOOP</text>
+                                    <text x="59" y="50" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84">HARD REAL-TIME</text>
+                                    <path d="M 15 60 h 88" stroke="#67508a" stroke-width="0.8" stroke-dasharray="2 2"/>
+                                    <text x="59" y="73" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B">OLED I²C 400 kHz</text>
+                                    <text x="59" y="87" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B">SW1..SW3 CALIB / E-STOP</text>
+                                </g>
+                                <!-- Arrow from MCU to Motor Drivers -->
+                                <path d="M 322 68 h 32" stroke="#67508a" stroke-width="1.2"/><path d="M 349 63 l 6 5 -6 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <text x="338" y="60" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84" text-anchor="middle">20 kHz</text>
+                                <!-- Dual DRV8871 H-Bridges -->
+                                <g transform="translate(356, 20)">
+                                    <rect width="88" height="44" fill="rgba(200,75,49,.06)" stroke="#C84B31" stroke-width="1"/>
+                                    <text x="44" y="16" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">2× DRV8871</text>
+                                    <text x="44" y="28" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">LEDC CH 0..3</text>
+                                    <text x="44" y="39" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#C84B31">N20 MOTORS</text>
+                                    <!-- Quadrature Encoders -->
+                                    <rect y="52" width="88" height="44" fill="none" stroke="#181716" stroke-width="1.1"/>
+                                    <text x="44" y="68" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">2× ENCODERS</text>
+                                    <text x="44" y="81" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">GPIO 32..35</text>
+                                    <text x="44" y="91" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#67508a">HARDWARE EXT INT</text>
+                                </g>
+                                <!-- Bottom line -->
+                                <text x="30" y="148" font-family="JetBrains Mono" font-size="8.5" fill="#8E8A84">TRACK SENSOR ARRAY → MUX PINPOINT → DETERMINISTIC PID STEERING → ENCODER FEEDBACK</text>
                             </svg>
-                            <div class="dsp-wave-wrap">
-                                <div class="dsp-wave-header">
-                                    <span>FILTER TOPOLOGY PREVIEW</span>
-                                    <button type="button" class="dsp-toggle-text" id="subDspBtn" onclick="toggleSubDsp()" data-i18n="dsp.filtered">[IIR Butterworth]</button>
-                                </div>
-                                <canvas id="subPpgCanvas" class="dsp-clean-canvas" width="380" height="38" aria-label="IIR and FIR filter topology preview"></canvas>
-                            </div>
                         </div>
                         <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.dsp.fig">FIG. 03 — BIOMEDICAL SIGNAL PROCESSING</span>
-                            <h3 class="folio-title" data-i18n="p.dsp.title">DSP-PPG Analyzer</h3>
-                            <div class="folio-tags" data-i18n="p.dsp.tags">Python · PyQt6 · scipy.signal</div>
-                            <p class="folio-desc" data-i18n="p.dsp.desc">
-                                A PyQt6 desktop analyzer for Excel PPG captures. It validates motion artifacts, processes IR and red channels with configurable IIR/FIR filters, and reports five physiological metrics.
+                            <span class="folio-fig" data-i18n="p.line.fig">FIG. 03 — HARD REAL-TIME EMBEDDED CONTROL</span>
+                            <h3 class="folio-title" data-i18n="p.line.title">High-Speed ESP32 Benchmark Line Follower</h3>
+                            <div class="folio-tags" data-i18n="p.line.tags">C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C</div>
+                            <p class="folio-desc" data-i18n="p.line.desc">
+                                A high-speed autonomous ground vehicle engineered for zero-latency path tracking. Features an 8-channel optical sensor array through a high-speed analog MUX, dual DRV8871 20 kHz PWM drivers, quadrature encoder feedback, and a deterministic PID loop.
                             </p>
                             <div class="folio-actions">
-                                <a href="https://github.com/tessal-hub/DSP-PPG" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
-                                <button type="button" class="link-ghost" onclick="showSubSpec('dsp')" data-i18n="action.spec">Inspect Spec</button>
+                                <a href="https://github.com/tessal-hub/line-follower" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
+                                <button type="button" class="link-ghost" onclick="showSubSpec('line')" data-i18n="action.spec">Inspect Spec</button>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Plate 04: ESP32-S3 ECG Monitor & Companion -->
+                    <!-- Plate 04: ESP32-S3 ECG Monitor & Touch Companion (Rank 4 - Biosignals & Interactive UI) -->
                     <article class="folio-item reverse">
                         <div class="folio-drawing" data-plate="TOUCHSCREEN ECG TELEMETRY" data-ref="ESP32-S3 · ILI9488 · 480×320 · RTOS" style="flex-direction:column; align-items:stretch;">
                             <svg class="drawing-svg" viewBox="0 0 460 210" aria-label="ESP32-S3 Touchscreen ECG Monitor and Companion topology">
@@ -268,125 +342,57 @@
                         </div>
                     </article>
 
-                    <!-- Plate 05: STM32 UART I/O Monitor -->
+                    <!-- Plate 05: STEM AI Platform (Rank 5 - TinyML & Gesture Pipelines) -->
                     <article class="folio-item">
-                        <div class="folio-drawing" data-plate="STM32 UART I/O MAP" data-ref="USART1 · 115200 BAUD · 12 OUT / 12 IN">
-                            <svg class="drawing-svg" viewBox="0 0 460 250" aria-label="STM32 twelve channel UART input output map">
-                                <g transform="translate(180,48)">
-                                    <rect width="100" height="112" fill="none" stroke="#181716" stroke-width="1.3"/>
-                                    <text x="50" y="35" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#181716">STM32</text>
-                                    <text x="50" y="51" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">USART1 · 115200</text>
-                                    <path d="M28 72h44M28 84h44M28 96h44" stroke="#67508a" stroke-width="1"/>
-                                    <text x="50" y="130" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">PA9 TX · PA10 RX</text>
+                        <div class="folio-drawing" data-plate="WAND GESTURE DATA FLOW" data-ref="50 Hz · 64 × 6 IMU WINDOW">
+                            <svg class="drawing-svg" viewBox="0 0 400 190" aria-label="STEM AI wand gesture data flow">
+                                <g transform="translate(26, 38)">
+                                    <rect x="20" y="0" width="30" height="76" rx="14" fill="none" stroke="#181716" stroke-width="1.4"/>
+                                    <circle cx="35" cy="12" r="4" fill="#C84B31"/>
+                                    <path d="M35 24v38 M25 35h20 M25 49h20" stroke="#67508a" stroke-width="1"/>
+                                    <text x="35" y="94" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">ESP32 + MPU6050</text>
                                 </g>
-                                <path d="M175 77H95M175 132H95M285 77h80M285 132h80" stroke="#67508a" stroke-width="1.2"/>
-                                <g transform="translate(28,55)">
-                                    <rect width="64" height="42" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
-                                    <text x="32" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">12 INPUTS</text>
-                                    <text x="32" y="29" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">GPIOA</text>
-                                    <g fill="#67508a"><circle cx="12" cy="36" r="2"/><circle cx="22" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><circle cx="42" cy="36" r="2"/><circle cx="52" cy="36" r="2"/></g>
+                                <path d="M92 76H132" stroke="#67508a" stroke-width="1.2"/><path d="M127 71l8 5-8 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <text x="100" y="63" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">UART / CSV</text>
+                                <g transform="translate(140, 38)">
+                                    <rect width="94" height="76" fill="none" stroke="#181716" stroke-width="1.2"/>
+                                    <path d="M10 20h74M10 32h74M10 44h74M10 56h74" stroke="#67508a" stroke-width="1" opacity=".7"/>
+                                    <text x="47" y="16" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">64 × 6 WINDOW</text>
+                                    <text x="47" y="70" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">ax ay az gx gy gz</text>
                                 </g>
-                                <g transform="translate(368,55)">
-                                    <rect width="64" height="42" fill="none" stroke="#181716" stroke-width="1"/>
-                                    <text x="32" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">12 OUTPUTS</text>
-                                    <text x="32" y="29" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">GPIOB</text>
-                                    <g fill="#C84B31"><circle cx="12" cy="36" r="2"/><circle cx="22" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><circle cx="42" cy="36" r="2"/><circle cx="52" cy="36" r="2"/></g>
+                                <path d="M240 58h28M240 94h28" stroke="#67508a" stroke-width="1.2"/><path d="M263 53l8 5-8 5M263 89l8 5-8 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <g transform="translate(276, 31)">
+                                    <rect width="96" height="35" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
+                                    <text x="48" y="15" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">FEW-SHOT ENCODER</text>
+                                    <text x="48" y="27" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">TENSORFLOW LITE</text>
+                                    <rect y="50" width="96" height="35" fill="none" stroke="#181716" stroke-width="1"/>
+                                    <text x="48" y="65" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">ML LAB · 15 MODELS</text>
+                                    <text x="48" y="77" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">C99 EXPORT</text>
                                 </g>
-                                <path d="M230 164v28" stroke="#67508a" stroke-width="1.2"/><path d="M225 187l5 7 5-7" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <text x="230" y="215" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">PYQT5 MONITOR · VIRTUAL STM32 SIMULATOR</text>
-                                <g transform="translate(130,228)" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">
-                                    <text x="0" y="0">BIT 7</text><text x="55" y="0">BITS 0–6</text>
-                                    <rect x="28" y="-9" width="18" height="12" fill="rgba(200,75,49,.12)" stroke="#C84B31"/><rect x="83" y="-9" width="62" height="12" fill="rgba(103,80,138,.08)" stroke="#67508a"/>
-                                    <text x="31" y="0" fill="#C84B31">STATE</text><text x="87" y="0" fill="#67508a">CHANNEL 1–12</text>
+                                <g transform="translate(146,132)">
+                                    <circle cx="0" cy="0" r="3" fill="#67508a"/><circle cx="68" cy="0" r="3" fill="#67508a"/><circle cx="136" cy="0" r="3" fill="#67508a"/><circle cx="204" cy="0" r="3" fill="#C84B31"/>
+                                    <path d="M5 0h58M73 0h58M141 0h58" stroke="#67508a" stroke-width="1"/>
+                                    <text x="0" y="14" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">COLLECT</text><text x="68" y="14" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">TRAIN</text><text x="136" y="14" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">DIAGNOSE</text><text x="204" y="14" text-anchor="end" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">DEPLOY</text>
                                 </g>
-                                <text x="30" y="28" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">ONE-BYTE COMMAND: BIT 7 = STATE · BITS 0..6 = CHANNEL</text>
+                                <text x="30" y="154" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">RECORD → TRAIN → DIAGNOSE → FLASH TO WAND</text>
                             </svg>
                         </div>
                         <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.hex.fig">FIG. 05 — SERIAL I/O CONTROL</span>
-                            <h3 class="folio-title" data-i18n="p.hex.title">STM32 12-Channel I/O Monitor</h3>
-                            <div class="folio-tags" data-i18n="p.hex.tags">PyQt5 · PySerial · STM32 · USART1</div>
-                            <p class="folio-desc" data-i18n="p.hex.desc">
-                                A PyQt5 UART workbench for twelve STM32 outputs and twelve live inputs, with serial traffic inspection, byte-level commands, counters, and a built-in virtual hardware simulator.
+                            <span class="folio-fig" data-i18n="p.ai.fig">FIG. 05 — WAND GESTURE LEARNING</span>
+                            <h3 class="folio-title" data-i18n="p.ai.title">STEM AI Platform</h3>
+                            <div class="folio-tags" data-i18n="p.ai.tags">PyQt6 · ESP32 · MPU6050 · TensorFlow Lite</div>
+                            <p class="folio-desc" data-i18n="p.ai.desc">
+                                A desktop learning environment where a physical ESP32 wand streams 6-axis IMU data at 50 Hz for few-shot gesture recognition, classic ML experiments, and one-click C99 deployment.
                             </p>
                             <div class="folio-actions">
-                                <a href="https://github.com/tessal-hub/appdts" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
-                                <button type="button" class="link-ghost" onclick="showSubSpec('hex')" data-i18n="action.spec">Inspect Spec</button>
+                                <a href="https://github.com/tessal-hub/stem_ai" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
+                                <button type="button" class="link-ghost" onclick="showSubSpec('ai')" data-i18n="action.spec">Inspect Spec</button>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Plate 06: High-Speed Line Follower Robot -->
+                    <!-- Plate 06: 360° LED Matrix & Android BLE Controller (Rank 6 - Spatial Display & Wireless Bus) -->
                     <article class="folio-item reverse">
-                        <div class="folio-drawing" data-plate="HIGH-SPEED VEHICLE DYNAMICS" data-ref="ESP32 · 8-CH MUX · 20 kHz PWM · PID">
-                            <svg class="drawing-svg" viewBox="0 0 460 200" aria-label="High-Speed ESP32 Line Follower Hardware Architecture">
-                                <!-- Front 8-Sensor Array -->
-                                <g transform="translate(30, 20)">
-                                    <rect width="130" height="36" fill="none" stroke="#181716" stroke-width="1.3"/>
-                                    <text x="65" y="15" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#181716">8-CHANNEL OPTICAL BAR</text>
-                                    <g fill="#67508a">
-                                        <circle cx="12" cy="26" r="2.2"/><circle cx="27" cy="26" r="2.2"/><circle cx="42" cy="26" r="2.2"/><circle cx="57" cy="26" r="2.2"/>
-                                        <circle cx="72" cy="26" r="2.2"/><circle cx="87" cy="26" r="2.2"/><circle cx="102" cy="26" r="2.2"/><circle cx="117" cy="26" r="2.2"/>
-                                    </g>
-                                    <text x="12" y="34" font-family="JetBrains Mono" font-size="5.5" fill="#8E8A84">S0</text>
-                                    <text x="117" y="34" font-family="JetBrains Mono" font-size="5.5" fill="#8E8A84">S7</text>
-                                </g>
-                                <!-- Arrow to MUX -->
-                                <path d="M 95 56 v 18" stroke="#67508a" stroke-width="1.2"/><path d="M 90 69 l 5 5 5 -5" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <!-- CD74HC4067 MUX -->
-                                <g transform="translate(30, 74)">
-                                    <rect width="130" height="42" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
-                                    <text x="65" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8.5" fill="#181716">CD74HC4067 (16:1 MUX)</text>
-                                    <text x="65" y="31" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84">GPIO 16,17,23 → ADC1_CH0</text>
-                                </g>
-                                <!-- Arrow from MUX to MCU -->
-                                <path d="M 160 95 h 42" stroke="#67508a" stroke-width="1.2"/><path d="M 197 90 l 6 5 -6 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <text x="180" y="87" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84" text-anchor="middle">ADC1</text>
-                                <!-- ESP32 Controller Core -->
-                                <g transform="translate(204, 20)">
-                                    <rect width="118" height="96" fill="none" stroke="#181716" stroke-width="1.3"/>
-                                    <text x="59" y="20" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#181716">ESP32 MCU</text>
-                                    <text x="59" y="36" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#C84B31">1 kHz PID LOOP</text>
-                                    <text x="59" y="50" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84">HARD REAL-TIME</text>
-                                    <path d="M 15 60 h 88" stroke="#67508a" stroke-width="0.8" stroke-dasharray="2 2"/>
-                                    <text x="59" y="73" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B">OLED I²C 400 kHz</text>
-                                    <text x="59" y="87" text-anchor="middle" font-family="JetBrains Mono" font-size="7.5" fill="#524F4B">SW1..SW3 CALIB / E-STOP</text>
-                                </g>
-                                <!-- Arrow from MCU to Motor Drivers -->
-                                <path d="M 322 68 h 32" stroke="#67508a" stroke-width="1.2"/><path d="M 349 63 l 6 5 -6 5" fill="none" stroke="#67508a" stroke-width="1.2"/>
-                                <text x="338" y="60" font-family="JetBrains Mono" font-size="7.5" fill="#8E8A84" text-anchor="middle">20 kHz</text>
-                                <!-- Dual DRV8871 H-Bridges -->
-                                <g transform="translate(356, 20)">
-                                    <rect width="88" height="44" fill="rgba(200,75,49,.06)" stroke="#C84B31" stroke-width="1"/>
-                                    <text x="44" y="16" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">2× DRV8871</text>
-                                    <text x="44" y="28" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">LEDC CH 0..3</text>
-                                    <text x="44" y="39" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#C84B31">N20 MOTORS</text>
-                                    <!-- Quadrature Encoders -->
-                                    <rect y="52" width="88" height="44" fill="none" stroke="#181716" stroke-width="1.1"/>
-                                    <text x="44" y="68" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">2× ENCODERS</text>
-                                    <text x="44" y="81" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">GPIO 32..35</text>
-                                    <text x="44" y="91" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="#67508a">HARDWARE EXT INT</text>
-                                </g>
-                                <!-- Bottom line -->
-                                <text x="30" y="148" font-family="JetBrains Mono" font-size="8.5" fill="#8E8A84">TRACK SENSOR ARRAY → MUX PINPOINT → DETERMINISTIC PID STEERING → ENCODER FEEDBACK</text>
-                            </svg>
-                        </div>
-                        <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.line.fig">FIG. 06 — HARD REAL-TIME EMBEDDED CONTROL</span>
-                            <h3 class="folio-title" data-i18n="p.line.title">High-Speed ESP32 Benchmark Line Follower</h3>
-                            <div class="folio-tags" data-i18n="p.line.tags">C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C</div>
-                            <p class="folio-desc" data-i18n="p.line.desc">
-                                A high-speed autonomous ground vehicle engineered for zero-latency path tracking. Features an 8-channel optical sensor array through a high-speed analog MUX, dual DRV8871 20 kHz PWM drivers, quadrature encoder feedback, and a deterministic PID loop.
-                            </p>
-                            <div class="folio-actions">
-                                <a href="https://github.com/tessal-hub/line-follower" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
-                                <button type="button" class="link-ghost" onclick="showSubSpec('line')" data-i18n="action.spec">Inspect Spec</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Plate 07: 360° LED Matrix & Android BLE Controller -->
-                    <article class="folio-item">
                         <div class="folio-drawing" data-plate="360° SPATIAL MATRIX &amp; BLE PROTOCOL" data-ref="KOTLIN · ESP32 · NORDIC UART · &lt;50ms">
                             <svg class="drawing-svg" viewBox="0 0 460 200" aria-label="360 Degree LED Matrix and Android BLE Architecture">
                                 <!-- 360 Degree LED Matrix Cylinder -->
@@ -434,7 +440,7 @@
                             </svg>
                         </div>
                         <div class="folio-details">
-                            <span class="folio-fig" data-i18n="p.led.fig">FIG. 07 — WIRELESS PERIPHERAL &amp; APP INTEGRATION</span>
+                            <span class="folio-fig" data-i18n="p.led.fig">FIG. 06 — WIRELESS PERIPHERAL &amp; APP INTEGRATION</span>
                             <h3 class="folio-title" data-i18n="p.led.title">360° LED Matrix &amp; Android BLE Controller</h3>
                             <div class="folio-tags" data-i18n="p.led.tags">Kotlin · Android · ESP32 · Nordic UART BLE</div>
                             <p class="folio-desc" data-i18n="p.led.desc">
@@ -443,6 +449,88 @@
                             <div class="folio-actions">
                                 <a href="https://github.com/tessal-hub/leding" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
                                 <button type="button" class="link-ghost" onclick="showSubSpec('led')" data-i18n="action.spec">Inspect Spec</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Plate 07: DSP-PPG Analyzer (Rank 7 - Biomedical Signal Processing Algorithms) -->
+                    <article class="folio-item">
+                        <div class="folio-drawing" data-plate="DUAL-CHANNEL PPG ANALYSIS" data-ref="EXCEL · TIME · IR · RED" style="flex-direction:column; align-items:stretch;">
+                            <svg viewBox="0 0 380 140" style="width:100%; height:auto;" aria-label="PPG bandpass filter diagram">
+                                <rect x="20" y="10" width="340" height="85" fill="none" stroke="#E8E5DF" stroke-width="1"/>
+                                <path d="M 30 70 L 60 70 L 70 50 L 80 85 L 90 40 L 105 70 L 140 70" fill="none" stroke="#C84B31" stroke-width="1.5"/>
+                                <path d="M 140 70 L 170 70 L 180 50 L 190 85 L 200 40 L 215 70 L 250 70" fill="none" stroke="#C84B31" stroke-width="1.5"/>
+                                <text x="30" y="30" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">EXCEL INPUT: timestamp · IR · red</text>
+                                <path d="M270 78h68M270 78v-28M270 78l18-12 16 6 18-20" fill="none" stroke="#67508a" stroke-width="1"/>
+                                <text x="272" y="47" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">0.8–4.0 Hz BAND</text>
+                                <text x="30" y="115" font-family="JetBrains Mono" font-size="9" fill="#524F4B">ARTIFACT CHECK → HR · SpO2 · RR · HRV · PI</text>
+                            </svg>
+                            <div class="dsp-wave-wrap">
+                                <div class="dsp-wave-header">
+                                    <span>FILTER TOPOLOGY PREVIEW</span>
+                                    <button type="button" class="dsp-toggle-text" id="subDspBtn" onclick="toggleSubDsp()" data-i18n="dsp.filtered">[IIR Butterworth]</button>
+                                </div>
+                                <canvas id="subPpgCanvas" class="dsp-clean-canvas" width="380" height="38" aria-label="IIR and FIR filter topology preview"></canvas>
+                            </div>
+                        </div>
+                        <div class="folio-details">
+                            <span class="folio-fig" data-i18n="p.dsp.fig">FIG. 07 — BIOMEDICAL SIGNAL PROCESSING</span>
+                            <h3 class="folio-title" data-i18n="p.dsp.title">DSP-PPG Analyzer</h3>
+                            <div class="folio-tags" data-i18n="p.dsp.tags">Python · PyQt6 · scipy.signal</div>
+                            <p class="folio-desc" data-i18n="p.dsp.desc">
+                                A PyQt6 desktop analyzer for Excel PPG captures. It validates motion artifacts, processes IR and red channels with configurable IIR/FIR filters, and reports five physiological metrics.
+                            </p>
+                            <div class="folio-actions">
+                                <a href="https://github.com/tessal-hub/DSP-PPG" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
+                                <button type="button" class="link-ghost" onclick="showSubSpec('dsp')" data-i18n="action.spec">Inspect Spec</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Plate 08: STM32 UART I/O Monitor (Rank 8 - Hardware Bringup & Protocol Simulator) -->
+                    <article class="folio-item reverse">
+                        <div class="folio-drawing" data-plate="STM32 UART I/O MAP" data-ref="USART1 · 115200 BAUD · 12 OUT / 12 IN">
+                            <svg class="drawing-svg" viewBox="0 0 460 250" aria-label="STM32 twelve channel UART input output map">
+                                <g transform="translate(180,48)">
+                                    <rect width="100" height="112" fill="none" stroke="#181716" stroke-width="1.3"/>
+                                    <text x="50" y="35" text-anchor="middle" font-family="JetBrains Mono" font-size="11" fill="#181716">STM32</text>
+                                    <text x="50" y="51" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">USART1 · 115200</text>
+                                    <path d="M28 72h44M28 84h44M28 96h44" stroke="#67508a" stroke-width="1"/>
+                                    <text x="50" y="130" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">PA9 TX · PA10 RX</text>
+                                </g>
+                                <path d="M175 77H95M175 132H95M285 77h80M285 132h80" stroke="#67508a" stroke-width="1.2"/>
+                                <g transform="translate(28,55)">
+                                    <rect width="64" height="42" fill="rgba(103,80,138,.05)" stroke="#67508a" stroke-width="1"/>
+                                    <text x="32" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">12 INPUTS</text>
+                                    <text x="32" y="29" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">GPIOA</text>
+                                    <g fill="#67508a"><circle cx="12" cy="36" r="2"/><circle cx="22" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><circle cx="42" cy="36" r="2"/><circle cx="52" cy="36" r="2"/></g>
+                                </g>
+                                <g transform="translate(368,55)">
+                                    <rect width="64" height="42" fill="none" stroke="#181716" stroke-width="1"/>
+                                    <text x="32" y="17" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#181716">12 OUTPUTS</text>
+                                    <text x="32" y="29" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#8E8A84">GPIOB</text>
+                                    <g fill="#C84B31"><circle cx="12" cy="36" r="2"/><circle cx="22" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><circle cx="42" cy="36" r="2"/><circle cx="52" cy="36" r="2"/></g>
+                                </g>
+                                <path d="M230 164v28" stroke="#67508a" stroke-width="1.2"/><path d="M225 187l5 7 5-7" fill="none" stroke="#67508a" stroke-width="1.2"/>
+                                <text x="230" y="215" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">PYQT5 MONITOR · VIRTUAL STM32 SIMULATOR</text>
+                                <g transform="translate(130,228)" font-family="JetBrains Mono" font-size="7" fill="#8E8A84">
+                                    <text x="0" y="0">BIT 7</text><text x="55" y="0">BITS 0–6</text>
+                                    <rect x="28" y="-9" width="18" height="12" fill="rgba(200,75,49,.12)" stroke="#C84B31"/><rect x="83" y="-9" width="62" height="12" fill="rgba(103,80,138,.08)" stroke="#67508a"/>
+                                    <text x="31" y="0" fill="#C84B31">STATE</text><text x="87" y="0" fill="#67508a">CHANNEL 1–12</text>
+                                </g>
+                                <text x="30" y="28" font-family="JetBrains Mono" font-size="9" fill="#8E8A84">ONE-BYTE COMMAND: BIT 7 = STATE · BITS 0..6 = CHANNEL</text>
+                            </svg>
+                        </div>
+                        <div class="folio-details">
+                            <span class="folio-fig" data-i18n="p.hex.fig">FIG. 08 — SERIAL I/O CONTROL</span>
+                            <h3 class="folio-title" data-i18n="p.hex.title">STM32 12-Channel I/O Monitor</h3>
+                            <div class="folio-tags" data-i18n="p.hex.tags">PyQt5 · PySerial · STM32 · USART1</div>
+                            <p class="folio-desc" data-i18n="p.hex.desc">
+                                A PyQt5 UART workbench for twelve STM32 outputs and twelve live inputs, with serial traffic inspection, byte-level commands, counters, and a built-in virtual hardware simulator.
+                            </p>
+                            <div class="folio-actions">
+                                <a href="https://github.com/tessal-hub/appdts" target="_blank" rel="noopener noreferrer" class="link-text" data-i18n="action.repo">Repository ↗</a>
+                                <button type="button" class="link-ghost" onclick="showSubSpec('hex')" data-i18n="action.spec">Inspect Spec</button>
                             </div>
                         </div>
                     </article>
@@ -473,28 +561,30 @@
                             I am Tessal, an Electrical and Computer Engineer. I believe the highest form of engineering craftsmanship is subtractive: removing noise, unnecessary abstractions, and brittle complexity until only the pure, functioning system remains.
                         </p>
                         <p class="studio-p" data-i18n="studio.p2">
-                            From derivation of closed-form Jacobian equations to bare-metal register configuration, I approach systems engineering with patience, precision, and reverence for fundamental principles.
+                            From derivation of closed-form Jacobian equations and input shaping filters to bare-metal register configuration, I approach systems engineering with patience, precision, and reverence for fundamental principles.
                         </p>
 
                         <div class="studio-skills-grid">
                             <div>
                                 <div class="skill-col-title" data-i18n="skill.hw">Silicon &amp; Hardware</div>
                                 <ul class="skill-col-items">
-                                    <li>ESP32 (S3/C3) &amp; STM32 (ARM Cortex-M)</li>
+                                    <li>Luckfox Pico Max (Rockchip RV1106)</li>
+                                    <li>CoreXY Kinematics &amp; Linear Rails</li>
+                                    <li>ESP32 (S3/C3) &amp; STM32 (Cortex-M)</li>
+                                    <li>CAN Bus Toolhead &amp; TMC2209 Drivers</li>
                                     <li>AS5600 Encoders &amp; CD74HC4067 MUX</li>
                                     <li>ILI9488 Touch &amp; Fast I²C OLEDs</li>
-                                    <li>DRV8871 H-Bridges &amp; Power Electronics</li>
-                                    <li>KiCAD PCB Design &amp; AFE Conditioning</li>
                                 </ul>
                             </div>
                             <div>
                                 <div class="skill-col-title" data-i18n="skill.sw">Firmware &amp; Software</div>
                                 <ul class="skill-col-items">
-                                    <li>C / C++ (C++17/20, FreeRTOS)</li>
-                                    <li>Deterministic PID &amp; Q32.32 Fixed-Point</li>
+                                    <li>Embedded Linux &amp; Klipper Host Architecture</li>
+                                    <li>Input Shaping (ADXL345 Resonance Tuning)</li>
+                                    <li>C / C++ (C++17/20, FreeRTOS, Bare-Metal)</li>
+                                    <li>Hard Real-time PID &amp; Fixed-Point DDA</li>
                                     <li>Python (PyQt6, scipy.signal, TinyML)</li>
-                                    <li>Kotlin (Android Jetpack, BLE NUS)</li>
-                                    <li>Analytical Kinematics (Modified DH)</li>
+                                    <li>Kotlin (Android Jetpack, Nordic UART BLE)</li>
                                 </ul>
                             </div>
                         </div>
@@ -526,8 +616,8 @@
                             <span>Lê Hoàng Phúc Anh ↗</span>
                         </a>
                         <div class="network-link" style="border-bottom:none; opacity:0.75; font-size:12px;">
-                            <span>Location &amp; Status</span>
-                            <span>Ho Chi Minh City, VN · Active Lab</span>
+                            <span data-i18n="inquiry.locLabel">Location &amp; Status</span>
+                            <span data-i18n="inquiry.locValue">Hanoi, VN · Active Lab</span>
                         </div>
                     </div>
                 </div>

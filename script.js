@@ -6,7 +6,7 @@
    - Minimalist telemetry harmonic scope canvas
    - Live DSP-PPG photoplethysmography waveform canvas & filter toggle
    - Live ESP32-S3 ECG continuous waveform canvas & rhythm toggle
-   - Deep-dive technical specification modal drawer (7 verified projects)
+   - Deep-dive technical specification modal drawer (8 ranked projects)
    - Scroll progress indicator & keyboard accessibility
    ============================================================ */
 
@@ -25,50 +25,56 @@
             'nav.meta': 'ECE LAB · 2026',
             'hero.tag': 'Electrical & Computer Engineer',
             'hero.title': 'Crafting systems at the boundary of physical reality and digital silicon.',
-            'hero.lead': 'Robotics kinematics, embedded firmware architectures, real-time biosignal telemetry, and low-latency wireless peripherals designed with quiet restraint and mathematical clarity.',
-            'hero.works': 'Selected Engineering Works ↓',
+            'hero.lead': 'Mechatronics kinematics, embedded Linux hosts, deterministic firmware architectures, real-time biosignals, and high-speed motion controllers designed with quiet restraint and mathematical clarity.',
+            'hero.works': 'Ranked Engineering Works ↓',
             'hero.github': 'GitHub Archive ↗',
-            'hero.status': '07 Repositories Verified Live',
-            'telemetry.left': '6-AXIS ROBOTICS · 12-CH I/O',
-            'telemetry.center': 'ECG / PPG BIOSIGNALS · TINYML',
-            'telemetry.right': 'ESP32-S3 · STM32 · KOTLIN BLE',
-            'sec.works': 'Selected Works',
+            'hero.status': '08 Verified Engineering Projects',
+            'telemetry.left': 'COREXY KLIPPER · 6-AXIS ARM',
+            'telemetry.center': 'HIGH-SPEED PID · BIOSIGNALS',
+            'telemetry.right': 'LUCKFOX · ESP32-S3 · STM32',
+            'sec.works': 'Selected Works (Ranked by Complexity)',
             'sec.discipline': 'Discipline & Philosophy',
             'sec.inquiry': 'Begin a conversation.',
             'inquiry.lead': 'Have a complex embedded system to bring up, robotics to calibrate, biosignal telemetry to analyze, or an engineering role to discuss? I welcome thoughtful inquiries.',
-            'p.arm.fig': 'FIG. 01 — KINEMATICS & TRAJECTORY',
+            'inquiry.locLabel': 'Location & Status',
+            'inquiry.locValue': 'Hanoi, VN · Active Lab',
+            'p.corexy.fig': 'FIG. 01 — HIGH-SPEED MECHATRONICS & EMBEDDED LINUX',
+            'p.corexy.title': 'Custom CoreXY Klipper 3D Printer',
+            'p.corexy.tags': 'Embedded Linux · Luckfox Pico Max · Klipper · CAN Bus · CoreXY',
+            'p.corexy.desc': 'A scratch-built high-speed CoreXY 3D printer running Klipper Linux host directly on a Luckfox Pico Max (ARM Cortex-A7 @ 1.2 GHz). Features dual synchronized H-belt kinematics, CAN bus toolhead integration, ADXL345 input shaping for resonance compensation, and silent TMC2209 stepping.',
+            'p.arm.fig': 'FIG. 02 — KINEMATICS & TRAJECTORY',
             'p.arm.title': 'NEMA 6-Axis Robotic Arm',
             'p.arm.tags': 'C++17 · ESP32-S3 · FreeRTOS · Modified DH',
             'p.arm.desc': 'An ESP32-S3 drawing-arm controller pairing 6 AS5600 magnetic encoders with a 50 kHz fixed-point step engine, calibrated work planes, and closed-form kinematics.',
-            'p.ai.fig': 'FIG. 02 — WAND GESTURE LEARNING',
-            'p.ai.title': 'STEM AI Platform',
-            'p.ai.tags': 'PyQt6 · ESP32 · MPU6050 · TensorFlow Lite',
-            'p.ai.desc': 'A desktop learning environment where a physical ESP32 wand streams 6-axis IMU data at 50 Hz for few-shot gesture recognition, classic ML experiments, and one-click C99 deployment.',
-            'p.dsp.fig': 'FIG. 03 — BIOMEDICAL SIGNAL PROCESSING',
-            'p.dsp.title': 'DSP-PPG Analyzer',
-            'p.dsp.tags': 'Python · PyQt6 · scipy.signal',
-            'p.dsp.desc': 'A PyQt6 desktop analyzer for Excel PPG captures. It validates motion artifacts, processes IR and red channels with configurable IIR/FIR filters, and reports five physiological metrics.',
+            'p.line.fig': 'FIG. 03 — HARD REAL-TIME EMBEDDED CONTROL',
+            'p.line.title': 'High-Speed ESP32 Benchmark Line Follower',
+            'p.line.tags': 'C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C',
+            'p.line.desc': 'A high-speed autonomous ground vehicle engineered for zero-latency path tracking. Features an 8-channel optical sensor array through a high-speed analog MUX, dual DRV8871 20 kHz PWM drivers, quadrature encoder feedback, and a deterministic PID loop.',
             'p.ecg.fig': 'FIG. 04 — BIOSIGNAL & TOUCH COMPANION',
             'p.ecg.title': 'ESP32-S3 ECG Monitor & Companion',
             'p.ecg.tags': 'C · ESP32-S3 · ILI9488 · FreeRTOS',
             'p.ecg.desc': 'An ESP32-S3 touchscreen telemetry platform pairing a 480×320 ILI9488 display with real-time continuous ECG waveform plotting, statistical biosignal metrics, and an interactive state-driven companion mascot.',
-            'p.hex.fig': 'FIG. 05 — SERIAL I/O CONTROL',
-            'p.hex.title': 'STM32 12-Channel I/O Monitor',
-            'p.hex.tags': 'PyQt5 · PySerial · STM32 · USART1',
-            'p.hex.desc': 'A PyQt5 UART workbench for twelve STM32 outputs and twelve live inputs, with serial traffic inspection, byte-level commands, counters, and a built-in virtual hardware simulator.',
-            'p.line.fig': 'FIG. 06 — HARD REAL-TIME EMBEDDED CONTROL',
-            'p.line.title': 'High-Speed ESP32 Benchmark Line Follower',
-            'p.line.tags': 'C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C',
-            'p.line.desc': 'A high-speed autonomous ground vehicle engineered for zero-latency path tracking. Features an 8-channel optical sensor array through a high-speed analog MUX, dual DRV8871 20 kHz PWM drivers, quadrature encoder feedback, and a deterministic PID loop.',
-            'p.led.fig': 'FIG. 07 — WIRELESS PERIPHERAL & APP INTEGRATION',
+            'p.ai.fig': 'FIG. 05 — WAND GESTURE LEARNING',
+            'p.ai.title': 'STEM AI Platform',
+            'p.ai.tags': 'PyQt6 · ESP32 · MPU6050 · TensorFlow Lite',
+            'p.ai.desc': 'A desktop learning environment where a physical ESP32 wand streams 6-axis IMU data at 50 Hz for few-shot gesture recognition, classic ML experiments, and one-click C99 deployment.',
+            'p.led.fig': 'FIG. 06 — WIRELESS PERIPHERAL & APP INTEGRATION',
             'p.led.title': '360° LED Matrix & Android BLE Controller',
             'p.led.tags': 'Kotlin · Android · ESP32 · Nordic UART BLE',
             'p.led.desc': 'A 360° smart LED matrix lamp and Android control ecosystem. Communicates over Nordic UART Service (NUS) BLE with sub-50ms latency, streaming real-time 6-axis IMU orientation, battery telemetry, 10+ dynamic visual shaders, and background notification triggers.',
+            'p.dsp.fig': 'FIG. 07 — BIOMEDICAL SIGNAL PROCESSING',
+            'p.dsp.title': 'DSP-PPG Analyzer',
+            'p.dsp.tags': 'Python · PyQt6 · scipy.signal',
+            'p.dsp.desc': 'A PyQt6 desktop analyzer for Excel PPG captures. It validates motion artifacts, processes IR and red channels with configurable IIR/FIR filters, and reports five physiological metrics.',
+            'p.hex.fig': 'FIG. 08 — SERIAL I/O CONTROL',
+            'p.hex.title': 'STM32 12-Channel I/O Monitor',
+            'p.hex.tags': 'PyQt5 · PySerial · STM32 · USART1',
+            'p.hex.desc': 'A PyQt5 UART workbench for twelve STM32 outputs and twelve live inputs, with serial traffic inspection, byte-level commands, counters, and a built-in virtual hardware simulator.',
             'action.repo': 'Repository ↗',
             'action.spec': 'Inspect Spec',
             'studio.heading': 'Reduction to the structural essence.',
             'studio.p1': 'I am Tessal, an Electrical and Computer Engineer. I believe the highest form of engineering craftsmanship is subtractive: removing noise, unnecessary abstractions, and brittle complexity until only the pure, functioning system remains.',
-            'studio.p2': 'From derivation of closed-form Jacobian equations to bare-metal register configuration, I approach systems engineering with patience, precision, and reverence for fundamental principles.',
+            'studio.p2': 'From derivation of closed-form Jacobian equations and input shaping filters to bare-metal register configuration, I approach systems engineering with patience, precision, and reverence for fundamental principles.',
             'skill.hw': 'Silicon & Hardware',
             'skill.sw': 'Firmware & Software',
             'dsp.filtered': '[IIR Butterworth]',
@@ -90,50 +96,56 @@
             'nav.meta': 'PHÒNG THÍ NGHIỆM ECE · 2026',
             'hero.tag': 'Kỹ sư Điện & Máy tính',
             'hero.title': 'Chế tạo hệ thống ở ranh giới giữa thực tại vật lý và silicon số.',
-            'hero.lead': 'Động học robot, kiến trúc firmware nhúng, đo từ xa tín hiệu y sinh thời gian thực và thiết bị ngoại vi không dây độ trễ thấp, thiết kế với sự tinh giản và kỷ luật toán học.',
-            'hero.works': 'Xem các dự án tiêu biểu ↓',
+            'hero.lead': 'Động học cơ điện tử, Linux nhúng, kiến trúc firmware thời gian thực, đo từ xa tín hiệu y sinh và hệ thống điều khiển chuyển động tốc độ cao, thiết kế với sự tinh giản và kỷ luật toán học.',
+            'hero.works': 'Dự án kỹ thuật theo độ ấn tượng ↓',
             'hero.github': 'Kho lưu trữ GitHub ↗',
-            'hero.status': '07 kho mã nguồn đã xác minh',
-            'telemetry.left': 'ROBOT 6 TRỤC · I/O 12 KÊNH',
-            'telemetry.center': 'TÍN HIỆU ECG / PPG · TINYML',
-            'telemetry.right': 'ESP32-S3 · STM32 · KOTLIN BLE',
-            'sec.works': 'Dự án tiêu biểu',
+            'hero.status': '08 dự án kỹ thuật đã kiểm chứng',
+            'telemetry.left': 'COREXY KLIPPER · ROBOT 6 TRỤC',
+            'telemetry.center': 'PID TỐC ĐỘ CAO · ĐO Y SINH',
+            'telemetry.right': 'LUCKFOX · ESP32-S3 · STM32',
+            'sec.works': 'Dự án tiêu biểu (Sắp xếp theo độ phức tạp)',
             'sec.discipline': 'Kỷ luật & Triết lý',
             'sec.inquiry': 'Bắt đầu cuộc trò chuyện.',
             'inquiry.lead': 'Bạn có hệ thống nhúng phức tạp cần triển khai, robot cần hiệu chuẩn, dữ liệu y sinh cần đo đạc, hay vị trí kỹ thuật muốn trao đổi? Tôi luôn chào đón những kết nối chân thành.',
-            'p.arm.fig': 'HÌNH 01 — ĐỘNG HỌC & QUỸ ĐẠO CÁNH TAY',
+            'inquiry.locLabel': 'Địa điểm & Trạng thái',
+            'inquiry.locValue': 'Hà Nội, VN · Phòng Lab Hoạt động',
+            'p.corexy.fig': 'HÌNH 01 — CƠ ĐIỆN TỬ TỐC ĐỘ CAO & LINUX NHÚNG',
+            'p.corexy.title': 'Máy in 3D CoreXY Tùy biến Klipper',
+            'p.corexy.tags': 'Linux nhúng · Luckfox Pico Max · Klipper · CAN Bus · CoreXY',
+            'p.corexy.desc': 'Máy in 3D CoreXY tốc độ cao chế tạo tùy biến từ đầu, chạy Klipper Linux Host trên nền Luckfox Pico Max (ARM Cortex-A7 1.2 GHz). Tích hợp động học đai kép đối xứng, đầu in CAN bus, khử rung cộng hưởng cơ học Input Shaping qua ADXL345 và điều khiển bước siêu êm TMC2209.',
+            'p.arm.fig': 'HÌNH 02 — ĐỘNG HỌC & QUỸ ĐẠO CÁNH TAY',
             'p.arm.title': 'Cánh tay robot NEMA 6 trục',
             'p.arm.tags': 'C++17 · ESP32-S3 · FreeRTOS · Modified DH',
             'p.arm.desc': 'Bộ điều khiển cánh tay vẽ dùng ESP32-S3, 6 encoder từ AS5600, động cơ bước fixed-point 50 kHz, mặt phẳng làm việc hiệu chuẩn và động học dạng đóng.',
-            'p.ai.fig': 'HÌNH 02 — HỌC CỬ CHỈ ĐŨA PHÉP',
-            'p.ai.title': 'Nền tảng STEM AI',
-            'p.ai.tags': 'PyQt6 · ESP32 · MPU6050 · TensorFlow Lite',
-            'p.ai.desc': 'Môi trường học tập trên desktop: đũa ESP32 gửi dữ liệu IMU 6 trục ở 50 Hz để nhận diện cử chỉ few-shot, thí nghiệm ML cổ điển và nạp C99 một chạm.',
-            'p.dsp.fig': 'HÌNH 03 — XỬ LÝ TÍN HIỆU Y SINH',
-            'p.dsp.title': 'Bộ phân tích DSP-PPG',
-            'p.dsp.tags': 'Python · PyQt6 · scipy.signal',
-            'p.dsp.desc': 'Bộ phân tích PyQt6 cho dữ liệu PPG Excel. Ứng dụng kiểm tra nhiễu chuyển động, xử lý kênh IR và đỏ bằng bộ lọc IIR/FIR tùy chỉnh, rồi xuất năm chỉ số sinh lý.',
+            'p.line.fig': 'HÌNH 03 — ĐIỀU KHIỂN NHÚNG THỜI GIAN THỰC',
+            'p.line.title': 'Xe dò line tốc độ cao ESP32',
+            'p.line.tags': 'C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C',
+            'p.line.desc': 'Xe dò line tốc độ cao tối ưu độ trễ xử lý đường đi. Tích hợp mảng 8 cảm biến quang qua MUX analog tốc độ cao, điều khiển động cơ kép DRV8871 PWM 20 kHz, phản hồi encoder và vòng lặp PID thời gian thực.',
             'p.ecg.fig': 'HÌNH 04 — ĐO SINH HỌC & BẠN ĐỒNG HÀNH',
             'p.ecg.title': 'Máy đo ECG & Bạn đồng hành ESP32-S3',
             'p.ecg.tags': 'C · ESP32-S3 · ILI9488 · FreeRTOS',
             'p.ecg.desc': 'Nền tảng đo từ xa màn hình cảm ứng ESP32-S3 kết hợp màn hình ILI9488 480×320 với hiển thị dạng sóng ECG thời gian thực, đo đạc chỉ số sinh học và linh vật tương tác đa trạng thái.',
-            'p.hex.fig': 'HÌNH 05 — ĐIỀU KHIỂN I/O NỐI TIẾP',
-            'p.hex.title': 'Màn hình I/O STM32 12 kênh',
-            'p.hex.tags': 'PyQt5 · PySerial · STM32 · USART1',
-            'p.hex.desc': 'Workbench UART PyQt5 cho 12 ngõ ra và 12 ngõ vào STM32: kiểm tra lưu lượng serial, lệnh theo byte, bộ đếm và mô phỏng phần cứng tích hợp.',
-            'p.line.fig': 'HÌNH 06 — ĐIỀU KHIỂN NHÚNG THỜI GIAN THỰC',
-            'p.line.title': 'Xe dò line tốc độ cao ESP32',
-            'p.line.tags': 'C++ · ESP32 · DRV8871 · CD74HC4067 · Fast I2C',
-            'p.line.desc': 'Xe dò line tốc độ cao tối ưu độ trễ xử lý đường đi. Tích hợp mảng 8 cảm biến quang qua MUX analog tốc độ cao, điều khiển động cơ kép DRV8871 PWM 20 kHz, phản hồi encoder và vòng lặp PID thời gian thực.',
-            'p.led.fig': 'HÌNH 07 — NGOẠI VI KHÔNG DÂY & TÍCH HỢP APP',
+            'p.ai.fig': 'HÌNH 05 — HỌC CỬ CHỈ ĐŨA PHÉP',
+            'p.ai.title': 'Nền tảng STEM AI',
+            'p.ai.tags': 'PyQt6 · ESP32 · MPU6050 · TensorFlow Lite',
+            'p.ai.desc': 'Môi trường học tập trên desktop: đũa ESP32 gửi dữ liệu IMU 6 trục ở 50 Hz để nhận diện cử chỉ few-shot, thí nghiệm ML cổ điển và nạp C99 một chạm.',
+            'p.led.fig': 'HÌNH 06 — NGOẠI VI KHÔNG DÂY & TÍCH HỢP APP',
             'p.led.title': 'Đèn LED Matrix 360° & App Android BLE',
             'p.led.tags': 'Kotlin · Android · ESP32 · Nordic UART BLE',
             'p.led.desc': 'Hệ sinh thái đèn LED Matrix 360° và ứng dụng điều khiển Android. Kết nối qua BLE Nordic UART Service với độ trễ <50ms, truyền trực tiếp dữ liệu IMU 6 trục, pin, 10+ hiệu ứng ánh sáng và ngắt thông báo nền.',
+            'p.dsp.fig': 'HÌNH 07 — XỬ LÝ TÍN HIỆU Y SINH',
+            'p.dsp.title': 'Bộ phân tích DSP-PPG',
+            'p.dsp.tags': 'Python · PyQt6 · scipy.signal',
+            'p.dsp.desc': 'Bộ phân tích PyQt6 cho dữ liệu PPG Excel. Ứng dụng kiểm tra nhiễu chuyển động, xử lý kênh IR và đỏ bằng bộ lọc IIR/FIR tùy chỉnh, rồi xuất năm chỉ số sinh lý.',
+            'p.hex.fig': 'HÌNH 08 — ĐIỀU KHIỂN I/O NỐI TIẾP',
+            'p.hex.title': 'Màn hình I/O STM32 12 kênh',
+            'p.hex.tags': 'PyQt5 · PySerial · STM32 · USART1',
+            'p.hex.desc': 'Workbench UART PyQt5 cho 12 ngõ ra và 12 ngõ vào STM32: kiểm tra lưu lượng serial, lệnh theo byte, bộ đếm và mô phỏng phần cứng tích hợp.',
             'action.repo': 'Xem mã nguồn ↗',
             'action.spec': 'Xem đặc tả',
             'studio.heading': 'Tinh giản về bản chất cấu trúc.',
             'studio.p1': 'Tôi là Tessal, Kỹ sư Điện và Máy tính. Tôi tin rằng đỉnh cao của chế tác kỹ thuật là phép trừ: loại bỏ tạp âm, các lớp trừu tượng dư thừa và sự phức tạp mong manh cho đến khi chỉ còn lại một hệ thống thuần khiết, vận hành chính xác.',
-            'studio.p2': 'Từ việc thiết lập các phương trình Jacobian giải tích đến cấu hình thanh ghi trực tiếp trên phần cứng, tôi tiếp cận kỹ thuật hệ thống với sự kiên nhẫn, độ chuẩn xác và niềm tôn kính các nguyên lý nền tảng.',
+            'studio.p2': 'Từ việc thiết lập các phương trình động học giải tích, bộ lọc bù rung cộng hưởng đến cấu hình thanh ghi trực tiếp trên phần cứng, tôi tiếp cận kỹ thuật hệ thống với sự kiên nhẫn, độ chuẩn xác và niềm tôn kính các nguyên lý nền tảng.',
             'skill.hw': 'Silicon & Phần cứng',
             'skill.sw': 'Firmware & Phần mềm',
             'dsp.filtered': '[IIR Butterworth]',
@@ -389,8 +401,20 @@
         }
     }
 
-    /* ── 6. Engineering Specifications Modal Drawer ── */
+    /* ── 6. Engineering Specifications Modal Drawer (Ranked) ── */
     const subSpecs = {
+        corexy: {
+            title: "Custom CoreXY Klipper 3D Printer",
+            sub: "Embedded Linux · Luckfox Pico Max · Klipper · CAN Bus",
+            desc: "A scratch-built high-speed CoreXY 3D printer running Klipper Linux host directly on a Luckfox Pico Max (Rockchip RV1106). Engineered with dual synchronized H-belts, 1 Mbps CAN bus toolhead umbilical, silent TMC2209 stepping, and ADXL345 input shaping for resonance compensation at 20,000 mm/s² acceleration.",
+            bom: [
+                ["Host Compute", "Luckfox Pico Max (Rockchip RV1106, Cortex-A7 @ 1.2 GHz, 256MB DDR3L, Linux OS)"],
+                ["Kinematics", "Custom CoreXY dual synchronized belt geometry with linear rail MGN12/MGN9 axes"],
+                ["Toolhead Comms", "CAN Bus 1 Mbps toolhead board (RP2040/STM32) reducing 24-wire harness to 4 wires"],
+                ["Motion Dynamics", "Input Shaping resonance compensation via ADXL345 accelerometer (MZV/EI filters)"],
+                ["Thermal & Control", "TMC2209 UART steppers with sensorless homing, high-flow hotend, Moonraker/Mainsail web UI"]
+            ]
+        },
         arm: {
             title: "NEMA 6-Axis Robotic Arm",
             sub: "C++17 · ESP32-S3 · FreeRTOS · Modified DH",
@@ -401,54 +425,6 @@
                 ["Step engine", "50 kHz hardware timer with Q32.32 fixed-point DDA"],
                 ["Kinematics", "Craig Modified DH with analytical IK and 3-point work-plane calibration"],
                 ["Safety", "Online joint-error E-stop plus post-stop settlement validation"]
-            ]
-        },
-        ai: {
-            title: "STEM AI Platform",
-            sub: "PyQt6 · ESP32 · MPU6050 · TensorFlow Lite",
-            desc: "A physical-wand learning environment that makes the ML lifecycle inspectable: collect motion, train, diagnose, export, and flash a model to an ESP32.",
-            bom: [
-                ["Input", "ESP32 + MPU6050 streams 6-axis IMU frames over UART / UDP at 50 Hz"],
-                ["Recording", "Gesture CSV windows: 64 samples × 6 axes"],
-                ["Few-shot path", "TensorFlow / TensorFlow Lite prototypical encoder"],
-                ["ML Lab", "15 classic algorithms, diagnostics, augmentation, and model cards"],
-                ["Deployment", "C99 generation and one-click ESP32 flashing via esptool"]
-            ]
-        },
-        dsp: {
-            title: "DSP-PPG Analyzer",
-            sub: "Python · PyQt6 · scipy.signal",
-            desc: "A desktop PPG analysis tool for Excel captures with explicit artifact checks, configurable filter design, and quality-aware physiological metrics.",
-            bom: [
-                ["Input", "Excel columns for time, IR / infrared, and red / red_channel"],
-                ["Quality", "Motion-artifact detection precedes analysis"],
-                ["Filters", "Butterworth IIR high/low/bandpass and Hamming-window FIR lowpass"],
-                ["Metrics", "HR, SpO2, RR, HRV, and perfusion index"],
-                ["Distribution", "Source run or downloadable Windows release executable"]
-            ]
-        },
-        ecg: {
-            title: "ESP32-S3 ECG Monitor & Companion",
-            sub: "C · ESP32-S3 · ILI9488 · FreeRTOS",
-            desc: "A touchscreen telemetry companion that plots continuous real-time biosignals without frame drops or display flickering, combining biomedical monitoring with an interactive state-driven desktop mascot.",
-            bom: [
-                ["Display", "3.5\" 480×320 ILI9488 SPI/parallel LCD with resistive/capacitive touch"],
-                ["Controller", "ESP32-S3 dual-core LX7 @ 240 MHz with custom double-buffering engine"],
-                ["Analog Front-End", "Lead-II bio-potential amplifier with 0.05–150 Hz hardware filter"],
-                ["Telemetry", "Continuous min/max/average stats, heart rate BPM, and interval extraction"],
-                ["Companion", "Finite state machine mascot with 7 emotional GIF states and speech bubbles"]
-            ]
-        },
-        hex: {
-            title: "STM32 12-Channel I/O Monitor",
-            sub: "PyQt5 · PySerial · STM32 · USART1",
-            desc: "A desktop UART control and monitoring surface with byte-level protocol visibility and a simulator that makes the application testable before physical hardware is connected.",
-            bom: [
-                ["Transport", "USART1 at 115200 baud, 8N1; PA9 TX and PA10 RX"],
-                ["Outputs", "12 GPIOB channels with individual and bulk controls"],
-                ["Inputs", "12 GPIOA channels with live HIGH / LOW state and event counters"],
-                ["Protocol", "One command byte: bit 7 state, bits 0..6 channel number"],
-                ["Test mode", "Built-in virtual STM32 simulator and color-coded serial monitor"]
             ]
         },
         line: {
@@ -463,6 +439,30 @@
                 ["Interface", "SSD1306/SH1106 OLED at 400 kHz Fast I²C and dual tactical tactile switches"]
             ]
         },
+        ecg: {
+            title: "ESP32-S3 ECG Monitor & Companion",
+            sub: "C · ESP32-S3 · ILI9488 · FreeRTOS",
+            desc: "A touchscreen telemetry companion that plots continuous real-time biosignals without frame drops or display flickering, combining biomedical monitoring with an interactive state-driven desktop mascot.",
+            bom: [
+                ["Display", "3.5\" 480×320 ILI9488 SPI/parallel LCD with resistive/capacitive touch"],
+                ["Controller", "ESP32-S3 dual-core LX7 @ 240 MHz with custom double-buffering engine"],
+                ["Analog Front-End", "Lead-II bio-potential amplifier with 0.05–150 Hz hardware filter"],
+                ["Telemetry", "Continuous min/max/average stats, heart rate BPM, and interval extraction"],
+                ["Companion", "Finite state machine mascot with 7 emotional GIF states and speech bubbles"]
+            ]
+        },
+        ai: {
+            title: "STEM AI Platform",
+            sub: "PyQt6 · ESP32 · MPU6050 · TensorFlow Lite",
+            desc: "A physical-wand learning environment that makes the ML lifecycle inspectable: collect motion, train, diagnose, export, and flash a model to an ESP32.",
+            bom: [
+                ["Input", "ESP32 + MPU6050 streams 6-axis IMU frames over UART / UDP at 50 Hz"],
+                ["Recording", "Gesture CSV windows: 64 samples × 6 axes"],
+                ["Few-shot path", "TensorFlow / TensorFlow Lite prototypical encoder"],
+                ["ML Lab", "15 classic algorithms, diagnostics, augmentation, and model cards"],
+                ["Deployment", "C99 generation and one-click ESP32 flashing via esptool"]
+            ]
+        },
         led: {
             title: "360° LED Matrix & Android BLE Controller",
             sub: "Kotlin · Android · ESP32 · Nordic UART BLE",
@@ -473,6 +473,30 @@
                 ["Wireless Protocol", "Nordic UART Service (NUS) with custom compact binary payload"],
                 ["Sensors & Power", "6-axis MPU IMU (pitch/roll tilt angle), battery ADC, and RAM monitor"],
                 ["Mobile App", "Android Kotlin app with BleForegroundService, background notification listener, and BLE OTA"]
+            ]
+        },
+        dsp: {
+            title: "DSP-PPG Analyzer",
+            sub: "Python · PyQt6 · scipy.signal",
+            desc: "A desktop PPG analysis tool for Excel captures with explicit artifact checks, configurable filter design, and quality-aware physiological metrics.",
+            bom: [
+                ["Input", "Excel columns for time, IR / infrared, and red / red_channel"],
+                ["Quality", "Motion-artifact detection precedes analysis"],
+                ["Filters", "Butterworth IIR high/low/bandpass and Hamming-window FIR lowpass"],
+                ["Metrics", "HR, SpO2, RR, HRV, and perfusion index"],
+                ["Distribution", "Source run or downloadable Windows release executable"]
+            ]
+        },
+        hex: {
+            title: "STM32 12-Channel I/O Monitor",
+            sub: "PyQt5 · PySerial · STM32 · USART1",
+            desc: "A desktop UART control and monitoring surface with byte-level protocol visibility and a simulator that makes the application testable before physical hardware is connected.",
+            bom: [
+                ["Transport", "USART1 at 115200 baud, 8N1; PA9 TX and PA10 RX"],
+                ["Outputs", "12 GPIOB channels with individual and bulk controls"],
+                ["Inputs", "12 GPIOA channels with live HIGH / LOW state and event counters"],
+                ["Protocol", "One command byte: bit 7 state, bits 0..6 channel number"],
+                ["Test mode", "Built-in virtual STM32 simulator and color-coded serial monitor"]
             ]
         }
     };
