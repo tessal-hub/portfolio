@@ -83,8 +83,8 @@
             'ecg.active': '[Companion Active · 88 BPM]',
             'lang.toggle': 'VI',
             'lang.aria': 'Switch language to Vietnamese',
-            'footer.copy': '© 2026 Tessal (Lê Hoàng Phúc Anh). Subtractive Studio Production.',
-            'footer.creed': 'Kenya Hara "White" / Pentagram Architectural Restraint'
+            'footer.copy': '© 2026 Tessal (Lê Hoàng Phúc Anh) · Electrical & Computer Engineering',
+            'footer.creed': 'Hanoi, Vietnam'
         },
         vi: {
             'title.site': 'Tessal — Kỹ sư Điện & Máy tính',
@@ -154,8 +154,8 @@
             'ecg.active': '[Đo từ xa linh vật · 88 BPM]',
             'lang.toggle': 'EN',
             'lang.aria': 'Chuyển ngôn ngữ sang tiếng Anh',
-            'footer.copy': '© 2026 Tessal (Lê Hoàng Phúc Anh). Phiên bản Subtractive Studio.',
-            'footer.creed': 'Kenya Hara "White" / Chuẩn mực kiến trúc Pentagram'
+            'footer.copy': '© 2026 Tessal (Lê Hoàng Phúc Anh) · Kỹ thuật Điện & Máy tính',
+            'footer.creed': 'Hà Nội, Việt Nam'
         }
     };
 

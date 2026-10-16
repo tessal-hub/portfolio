@@ -4,7 +4,7 @@ Live personal engineering portfolio of **Tessal** (Lê Hoàng Phúc Anh), showca
 
 ## 🚀 Overview
 
-This website is designed with a **Subtractive Studio** aesthetic inspired by Kenya Hara ("White") and Pentagram architectural restraint — featuring zero card chrome, pure vector schematic blueprints, live biomedical signal telemetry, and full bilingual support (English & Vietnamese).
+This website is built with a clean, subtractive engineering aesthetic — featuring zero card chrome, pure vector schematic blueprints, live biomedical signal telemetry, and full bilingual support (English & Vietnamese).
 
 ## 🔬 Featured Engineering Works (Ranked by Complexity)
 
